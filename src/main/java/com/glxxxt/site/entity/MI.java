@@ -1,12 +1,13 @@
 package com.glxxxt.site.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author lcl
@@ -48,20 +49,20 @@ public class MI implements Serializable {
         this.ingredientId = ingredientId;
     }
 
-    public BigDecimal getRequirement(){
+    public BigDecimal getRequirement() {
         return requirement;
     }
 
-    public void setRequirement(BigDecimal remaining){
+    public void setRequirement(BigDecimal remaining) {
         this.requirement = remaining;
     }
 
     @Override
     public String toString() {
         return "MI{" +
-        "menuId=" + menuId +
-        ", ingredientId=" + ingredientId +
-        ", remaining=" + requirement +
-        "}";
+                "menuId=" + menuId +
+                ", ingredientId=" + ingredientId +
+                ", remaining=" + requirement +
+                "}";
     }
 }

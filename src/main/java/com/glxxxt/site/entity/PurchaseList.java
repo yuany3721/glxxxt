@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author lcl
@@ -53,7 +53,7 @@ public class PurchaseList implements Serializable {
         return ingredientName;
     }
 
-    public void setIngredientName(String  ingredientName) {
+    public void setIngredientName(String ingredientName) {
         this.ingredientName = ingredientName;
     }
 
@@ -84,11 +84,11 @@ public class PurchaseList implements Serializable {
     @Override
     public String toString() {
         return "PurchaseList{" +
-        "id=" + id +
-        ", ingredientName=" + ingredientName +
-        ", price=" + price +
-        ", quantity=" + quantity +
-        ", date=" + date +
-        "}";
+                "id=" + id +
+                ", ingredientName=" + ingredientName +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", date=" + date +
+                "}";
     }
 }

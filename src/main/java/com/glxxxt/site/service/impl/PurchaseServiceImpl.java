@@ -22,7 +22,7 @@ import java.util.List;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author lcl
@@ -43,25 +43,25 @@ public class PurchaseServiceImpl extends ServiceImpl<PurchaseMapper, Purchase> i
     public int purchase(Integer id, BigDecimal price, BigDecimal quantity) {
         String date = "";
         Date time = new Date();
-        SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         date = dateFormat.format(time);
         //新加入的食材对应菜品更新
         List<Ingredient> temp = ingredientMapper.getIngredient();
-        BigDecimal gogogogogo=BigDecimal.valueOf(0.05);
-        for(Ingredient t : temp){
-                List<MI> tem = miMapper.getMenuId(t.getId());
-                for(MI tt : tem){
-                    menuMapper.yesdishes(tt.getMenuId());
+        BigDecimal gogogogogo = BigDecimal.valueOf(0.05);
+        for (Ingredient t : temp) {
+            List<MI> tem = miMapper.getMenuId(t.getId());
+            for (MI tt : tem) {
+                menuMapper.yesdishes(tt.getMenuId());
             }
         }
-        return purchaseMapper.purchase(id, price, quantity,date);
+        return purchaseMapper.purchase(id, price, quantity, date);
     }
 
     @Override
     public List<PurchaseList> getList() {
         List<PurchaseList> list = new ArrayList<>();
         List<Purchase> tem = purchaseMapper.getAll();
-        for(Purchase t : tem){
+        for (Purchase t : tem) {
             PurchaseList tt = new PurchaseList();
             tt.setId(t.getId());
             tt.setIngredientName(ingredientMapper.getName(t.getIngredientId()));

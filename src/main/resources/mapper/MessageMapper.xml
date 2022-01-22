@@ -4,10 +4,10 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.glxxxt.site.entity.Message">
-        <result column="id" property="id" />
-        <result column="title" property="title" />
-        <result column="content" property="content" />
-        <result column="date" property="date" />
+        <result column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="date" property="date"/>
     </resultMap>
 
     <insert id="addMessage" parameterType="com.glxxxt.site.entity.Message">

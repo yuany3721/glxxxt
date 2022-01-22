@@ -4,9 +4,9 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.glxxxt.site.entity.Ingredient">
-        <id column="id" property="id" />
-        <result column="name" property="name" />
-        <result column="remaining" property="remaining" />
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="remaining" property="remaining"/>
     </resultMap>
 
     <select id="getIngredient" resultType="com.glxxxt.site.entity.Ingredient">

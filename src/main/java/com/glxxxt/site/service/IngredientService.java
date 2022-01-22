@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author lcl
@@ -17,7 +17,10 @@ import java.util.List;
  */
 public interface IngredientService extends IService<Ingredient> {
     List<Ingredient> getIngredient();
+
     int addIngredient(Integer id, BigDecimal addnum);
+
     int cook(List<Menu> menu);
+
     List<Ingredient> getNeeded();
 }

@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author lcl
@@ -42,8 +42,8 @@ public class IngredientServiceImpl extends ServiceImpl<IngredientMapper, Ingredi
     @Override
     public int cook(List<Menu> menu) {
         for (Menu obj : menu) {
-            List<MI> temp= miMapper.getRequirement(obj.getId());
-            for(MI t : temp){
+            List<MI> temp = miMapper.getRequirement(obj.getId());
+            for (MI t : temp) {
                 BigDecimal nownum = ingredientMapper.getNowNum(t.getIngredientId());
                 ingredientMapper.updateIngredient(t.getIngredientId(), nownum.subtract(t.getRequirement()));
             }

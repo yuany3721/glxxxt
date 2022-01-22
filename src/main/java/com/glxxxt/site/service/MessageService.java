@@ -1,13 +1,13 @@
 package com.glxxxt.site.service;
 
-import com.glxxxt.site.entity.Message;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.glxxxt.site.entity.Message;
 
 import java.util.List;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author lcl
@@ -15,5 +15,6 @@ import java.util.List;
  */
 public interface MessageService extends IService<Message> {
     int addMessage(String title, String message);
+
     List<Message> getAll();
 }

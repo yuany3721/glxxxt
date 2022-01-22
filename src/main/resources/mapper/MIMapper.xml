@@ -4,8 +4,8 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.glxxxt.site.entity.MI">
-        <id column="menu_id" property="menuId" />
-        <result column="ingredient_id" property="ingredientId" />
+        <id column="menu_id" property="menuId"/>
+        <result column="ingredient_id" property="ingredientId"/>
     </resultMap>
 
     <select id="getRequirement" resultType="com.glxxxt.site.entity.MI">

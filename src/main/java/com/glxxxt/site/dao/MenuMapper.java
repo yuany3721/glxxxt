@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author lcl
@@ -19,7 +19,10 @@ import java.util.List;
 @Repository
 public interface MenuMapper extends BaseMapper<Menu> {
     public List<Menu> getMenu();
+
     int nodishes(Integer id);
+
     int yesdishes(Integer id);
+
     String getDishName(Integer id);
 }

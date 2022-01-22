@@ -20,7 +20,6 @@ import javax.servlet.http.HttpServletResponse;
 public class AuthFilter implements Filter {
 
 
-
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         System.out.println("wesker---------------------init");
@@ -60,9 +59,9 @@ public class AuthFilter implements Filter {
 
         }*/
 
-        try{
+        try {
             filterChain.doFilter(servletRequest, servletResponse);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

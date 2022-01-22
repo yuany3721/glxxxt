@@ -1,14 +1,14 @@
 package com.glxxxt.site.service;
 
-import com.glxxxt.site.entity.Order;
-import com.glxxxt.site.entity.Menu;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.glxxxt.site.entity.Menu;
+import com.glxxxt.site.entity.Order;
 
 import java.util.List;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author lcl
@@ -17,5 +17,6 @@ import java.util.List;
 public interface OrderService extends IService<Order> {
 
     int newOrder(List<Menu> menu);
+
     List<Order> getOrder();
 }

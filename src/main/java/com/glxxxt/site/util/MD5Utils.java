@@ -7,7 +7,6 @@ import org.apache.shiro.util.ByteSource;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Map;
 import java.util.Random;
 
 /**
@@ -17,6 +16,7 @@ public class MD5Utils {
 
     /**
      * 普通MD5加密 01
+     *
      * @Title : getStrMD5
      */
     public static String getStrMD5(String inStr) {
@@ -50,11 +50,12 @@ public class MD5Utils {
 
     /**
      * 普通MD5加密 02
+     *
      * @Title : getStrrMD5
      */
     public static String getStrrMD5(String password) {
 
-        char hexDigits[] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };
+        char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
         try {
             byte strTemp[] = password.getBytes("UTF-8");
             MessageDigest mdTemp = MessageDigest.getInstance("MD5");
@@ -77,6 +78,7 @@ public class MD5Utils {
 
     /**
      * MD5双重解密
+     *
      * @Title : getconvertMD5
      */
     public static String getconvertMD5(String inStr) {
@@ -90,6 +92,7 @@ public class MD5Utils {
 
     /**
      * 使用Apache的Hex类实现Hex(16进制字符串和)和字节数组的互转
+     *
      * @Title : md5Hex
      */
     @SuppressWarnings("unused")
@@ -107,6 +110,7 @@ public class MD5Utils {
 
     /**
      * 加盐MD5加密
+     *
      * @Title : getSaltMD5
      */
     public static String getSaltMD5(String password) {
@@ -135,6 +139,7 @@ public class MD5Utils {
 
     /**
      * 验证加盐后是否和原文一致
+     *
      * @Title : verifyMD5
      */
     public static boolean getSaltverifyMD5(String password, String md5str) {
@@ -152,13 +157,14 @@ public class MD5Utils {
 
     /**
      * shiroMD5加盐加密
+     *
      * @param hash 加密方式
      * @param pwd  密码
      * @param salt 盐值
      * @param num  加密次数
      * @return shiroMD5加盐加密字符串
      */
-    public static Object getMd5WithSalt(String hash,Object pwd,String salt,int num){
+    public static Object getMd5WithSalt(String hash, Object pwd, String salt, int num) {
         ByteSource saltReal = ByteSource.Util.bytes(salt);//盐
         Object finalHash = new SimpleHash(hash, pwd,
                 saltReal, num);

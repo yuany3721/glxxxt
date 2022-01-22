@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author lcl
@@ -35,11 +35,11 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
     public List<Menu> getMenu() {
         //先检查是否有不可点的菜品
         List<Ingredient> temp = ingredientMapper.getIngredient();
-        BigDecimal gogogogogo=BigDecimal.valueOf(0.05);
-        for(Ingredient t : temp){
-            if(t.getRemaining().compareTo(gogogogogo) == -1 || t.getRemaining().compareTo(gogogogogo) == 0){
+        BigDecimal gogogogogo = BigDecimal.valueOf(0.05);
+        for (Ingredient t : temp) {
+            if (t.getRemaining().compareTo(gogogogogo) == -1 || t.getRemaining().compareTo(gogogogogo) == 0) {
                 List<MI> tem = miMapper.getMenuId(t.getId());
-                for(MI tt : tem){
+                for (MI tt : tem) {
                     menuMapper.nodishes(tt.getMenuId());
                 }
             }

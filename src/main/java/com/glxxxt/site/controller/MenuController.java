@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author lcl
@@ -27,10 +27,9 @@ public class MenuController {
     private MenuService menuService;
 
     @ResponseBody
-    @RequestMapping(value = "/getMenu",method = RequestMethod.POST)
-    public List<Menu> list(){
-        List<Menu> list = menuService.getMenu();
-        return list;
+    @RequestMapping(value = "/getMenu", method = RequestMethod.POST)
+    public List<Menu> list() {
+        return menuService.getMenu();
     }
 
 }

@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author lcl
@@ -17,8 +17,12 @@ import java.util.List;
  */
 public interface IngredientMapper extends BaseMapper<Ingredient> {
     List<Ingredient> getIngredient();
+
     BigDecimal getNowNum(Integer id);
+
     int updateIngredient(@Param("id") Integer id, @Param("remaining") BigDecimal num);
+
     List<Ingredient> getNeeded();
+
     String getName(Integer id);
 }

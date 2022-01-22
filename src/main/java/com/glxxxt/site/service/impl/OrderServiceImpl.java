@@ -34,11 +34,11 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         String id = "";
         Date time = new Date();
         //System.out.println(22222);
-        SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         id = dateFormat.format(time);
         //System.out.println(id);
         for (Menu obj : menu) {
-            if (orderMapper.newOrder(id,obj.getId()) == 1)
+            if (orderMapper.newOrder(id, obj.getId()) == 1)
                 continue;
             else
                 return 0;
@@ -50,7 +50,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     public List<Order> getOrder() {
         List<Order> tem = orderMapper.getOrder();
         List<Order> res = new ArrayList<>();
-        for(Order t : tem){
+        for (Order t : tem) {
             Order tt = new Order();
             tt.setId(t.getId());
             tt.setMenuId(t.getMenuId());

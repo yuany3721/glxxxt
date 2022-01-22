@@ -1,12 +1,13 @@
 package com.glxxxt.site.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author lcl
@@ -60,9 +61,9 @@ public class Ingredient implements Serializable {
     @Override
     public String toString() {
         return "Ingredient{" +
-        "id=" + id +
-        ", name=" + name +
-        ", remaining=" + remaining +
-        "}";
+                "id=" + id +
+                ", name=" + name +
+                ", remaining=" + remaining +
+                "}";
     }
 }

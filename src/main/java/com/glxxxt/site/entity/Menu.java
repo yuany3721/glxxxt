@@ -1,15 +1,17 @@
 package com.glxxxt.site.entity;
 
 import java.math.BigDecimal;
+
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
 import java.util.List;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author lcl
@@ -90,12 +92,12 @@ public class Menu implements Serializable {
     @Override
     public String toString() {
         return "Menu{" +
-        "id=" + id +
-        ", dishes=" + dishes +
-        ", type=" + type +
-        ", price=" + price +
-        ", availableFlag=" + availableFlag +
-        "}";
+                "id=" + id +
+                ", dishes=" + dishes +
+                ", type=" + type +
+                ", price=" + price +
+                ", availableFlag=" + availableFlag +
+                "}";
     }
 
 }

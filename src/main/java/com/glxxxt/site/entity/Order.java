@@ -1,11 +1,12 @@
 package com.glxxxt.site.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author lcl
@@ -48,15 +49,19 @@ public class Order implements Serializable {
         this.menuId = menuId;
     }
 
-    public String getMenuName(){return menuName;}
+    public String getMenuName() {
+        return menuName;
+    }
 
-    public void setMenuName(String menuName){this.menuName = menuName;}
+    public void setMenuName(String menuName) {
+        this.menuName = menuName;
+    }
 
     @Override
     public String toString() {
         return "Order{" +
-        "id=" + id +
-        ", menuId=" + menuId +
-        "}";
+                "id=" + id +
+                ", menuId=" + menuId +
+                "}";
     }
 }

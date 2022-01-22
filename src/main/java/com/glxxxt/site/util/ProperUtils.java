@@ -20,25 +20,25 @@ public class ProperUtils {
      * @Param []
      * @return java.util.Map<java.lang.String,java.lang.String>
      **/
-    public static Map<String,String> getHashProper(){
-        Map<String,String> map=new HashMap<String,String>();
+    public static Map<String, String> getHashProper() {
+        Map<String, String> map = new HashMap<String, String>();
         // 1. 通过当前类获取类加载器   访问方式： 类型.class.getClassLoader()
-        ClassLoader classLoader=ProperUtils.class.getClassLoader();
+        ClassLoader classLoader = ProperUtils.class.getClassLoader();
         // 2. 通过类类加载器获取一个输入流
-        InputStream is =classLoader.getResourceAsStream("hash.properties");
+        InputStream is = classLoader.getResourceAsStream("hash.properties");
         // 3. 创建properties对象
-        Properties p=new Properties();
+        Properties p = new Properties();
         // 4. 加载输入流
-        try{
+        try {
             p.load(is);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         // 5. 获取相关参数的值
-        map.put("hash",p.getProperty("hash"));
-        map.put("pwd",p.getProperty("pwd"));
-        map.put("salt",p.getProperty("salt"));
-        map.put("num",p.getProperty("num"));
+        map.put("hash", p.getProperty("hash"));
+        map.put("pwd", p.getProperty("pwd"));
+        map.put("salt", p.getProperty("salt"));
+        map.put("num", p.getProperty("num"));
         return map;
     }
 

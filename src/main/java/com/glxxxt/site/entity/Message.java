@@ -1,11 +1,12 @@
 package com.glxxxt.site.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author lcl
@@ -32,9 +33,13 @@ public class Message implements Serializable {
      */
     private String date;
 
-    public Integer getId(){return  id;}
+    public Integer getId() {
+        return id;
+    }
 
-    public void setId(Integer id){this.id = id;}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -64,9 +69,9 @@ public class Message implements Serializable {
     public String toString() {
         return "Message{" +
                 "id" + id +
-        "title=" + title +
-        ", content=" + content +
-        ", date=" + date +
-        "}";
+                "title=" + title +
+                ", content=" + content +
+                ", date=" + date +
+                "}";
     }
 }

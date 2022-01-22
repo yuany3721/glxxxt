@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author lcl
@@ -15,5 +15,6 @@ import java.util.List;
  */
 public interface MIMapper extends BaseMapper<MI> {
     List<MI> getRequirement(Integer id);
+
     List<MI> getMenuId(Integer id);
 }

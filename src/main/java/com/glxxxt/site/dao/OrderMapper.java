@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author lcl
@@ -16,5 +16,6 @@ import java.util.List;
  */
 public interface OrderMapper extends BaseMapper<Order> {
     int newOrder(@Param("id") String id, @Param("menu_id") int menuId);
+
     List<Order> getOrder();
 }

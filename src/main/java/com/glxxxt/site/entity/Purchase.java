@@ -1,12 +1,14 @@
 package com.glxxxt.site.entity;
 
 import java.math.BigDecimal;
+
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author lcl
@@ -86,11 +88,11 @@ public class Purchase implements Serializable {
     @Override
     public String toString() {
         return "Purchase{" +
-        "id=" + id +
-        ", ingredientId=" + ingredientId +
-        ", price=" + price +
-        ", quantity=" + quantity +
-        ", date=" + date +
-        "}";
+                "id=" + id +
+                ", ingredientId=" + ingredientId +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", date=" + date +
+                "}";
     }
 }

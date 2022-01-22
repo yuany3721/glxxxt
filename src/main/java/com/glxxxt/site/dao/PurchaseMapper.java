@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author lcl
@@ -17,5 +17,6 @@ import java.util.List;
  */
 public interface PurchaseMapper extends BaseMapper<Purchase> {
     int purchase(@Param("ingredient_id") Integer id, @Param("price") BigDecimal price, @Param("quantity") BigDecimal quantity, @Param("date") String date);
+
     List<Purchase> getAll();
 }

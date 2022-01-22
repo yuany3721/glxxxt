@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author lcl
@@ -28,7 +28,7 @@ public class MessageServiceImpl extends ServiceImpl<MessageMapper, Message> impl
     public int addMessage(String title, String message) {
         String date = "";
         Date time = new Date();
-        SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         date = dateFormat.format(time);
         return messageMapper.addMessage(title, message, date);
     }
