@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.yuany3721.glxxxt.dao.MessageMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.yuany3721.glxxxt.entity.Message">
+        <id column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="date" property="date" />
+    </resultMap>
+
+    <insert id="addMessage" parameterType="top.yuany3721.glxxxt.entity.Message">
+        insert into message (title, content, date) values (#{title}, #{content}, #{date})
+    </insert>
+    <select id="getAll" resultType="top.yuany3721.glxxxt.entity.Message">
+        select * from message
+    </select>
+
+</mapper>

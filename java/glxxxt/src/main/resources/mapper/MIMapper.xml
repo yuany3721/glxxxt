@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.yuany3721.glxxxt.dao.MIMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.yuany3721.glxxxt.entity.MI">
+        <id column="menu_id" property="menuId" />
+        <result column="ingredient_id" property="ingredientId" />
+        <result column="requirement" property="requirement" />
+    </resultMap>
+
+    <select id="getRequirement" resultType="top.yuany3721.glxxxt.entity.MI">
+        select * from m_i where menu_id = #{id};
+    </select>
+
+    <select id="getMenuId" resultType="top.yuany3721.glxxxt.entity.MI">
+        select * from m_i where ingredient_id = #{id};
+    </select>
+
+</mapper>

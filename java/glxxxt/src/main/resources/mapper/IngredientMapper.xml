@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.yuany3721.glxxxt.dao.IngredientMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.yuany3721.glxxxt.entity.Ingredient">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="remaining" property="remaining" />
+    </resultMap>
+
+    <select id="getIngredient" resultType="top.yuany3721.glxxxt.entity.Ingredient">
+        select * from ingredient;
+    </select>
+
+    <select id="getNeeded" resultType="top.yuany3721.glxxxt.entity.Ingredient">
+        select * from ingredient where remaining &lt;= 0.05;
+    </select>
+
+    <select id="getNowNum" resultType="BigDecimal">
+        select remaining from ingredient where id = #{id}
+    </select>
+
+    <update id="updateIngredient" parameterType="top.yuany3721.glxxxt.entity.Ingredient">
+        update ingredient
+        set remaining=#{remaining}
+        where id = #{id}
+    </update>
+
+    <select id="getName" resultType="String">
+        select `name` from ingredient where id=#{id}
+    </select>
+
+</mapper>
